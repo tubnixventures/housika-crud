@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { ChatsController } from "../controllers/chats/chats.controller";
+import { ChatsController } from "../controllers/chats/chats.controller.js";
 
 const chatsRouter = new Hono();
 

@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { MessagesController } from "../controllers/messages/messages.controller";
+import { MessagesController } from "../controllers/messages/messages.controller.js";
 
 const messagesRouter = new Hono();
 

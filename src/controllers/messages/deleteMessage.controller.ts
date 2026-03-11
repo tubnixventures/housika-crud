@@ -1,6 +1,6 @@
-import { deleteMessageModel } from "../../models/messages/deleteMessage.model";
-import { verifyToken } from "../../utils/jwt";
-import { getSession } from "../../utils/redis";
+import { deleteMessageModel } from "../../models/messages/deleteMessage.model.js";
+import { verifyToken } from "../../utils/jwt.js";
+import { getSession } from "../../utils/redis.js";
 
 export async function deleteMessageController(req: any) {
   const token = req.headers.authorization?.split(" ")[1];
