@@ -1,5 +1,5 @@
-# Use official Node.js LTS (slim for smaller footprint)
-FROM node:20-slim AS base
+# Use official Node.js LTS (Node 24 slim for smaller footprint)
+FROM node:24-slim AS base
 
 # Set working directory
 WORKDIR /app
@@ -21,5 +21,5 @@ EXPOSE 3000
 HEALTHCHECK --interval=30s --timeout=10s --start-period=20s --retries=3 \
   CMD curl -f http://localhost:3000/health || exit 1
 
-# Run the app
-CMD ["node", "dist/server.js"]
+# Run the app (entry point is index.ts compiled to dist/index.js)
+CMD ["node", "dist/index.js"]
