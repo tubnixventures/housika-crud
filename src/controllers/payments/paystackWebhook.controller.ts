@@ -1,5 +1,7 @@
 import crypto from "crypto";
 import { updatePaymentModel } from "../../models/payments/updatePayment.model.js";
+import dotenv from 'dotenv';
+dotenv.config()
 
 export async function paystackWebhookController(req: any) {
   const secret = process.env.PAYSTACK_SECRET_KEY!;
